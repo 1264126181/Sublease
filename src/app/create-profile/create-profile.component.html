@@ -1,0 +1,39 @@
+
+<form #userForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+{{profileModel|json}}
+  <div class="form-group">
+    <label>First Nmame</label>
+    <input type="text" class="form-control"  required name="firstName" #firstName="ngModel" [class.is-invalid]="firstName.invalid&& firstName.touched" [(ngModel)]="profileModel.firstName">
+    <small class=text-danger [class.d-none]="firstName.valid||firstName.untouched">please enter your first name</small>
+  </div>
+
+  <div class="form-group">
+      <label>Last Nmame</label>
+      <input type="text" class="form-control" name="lastName" required #lastName="ngModel" [class.is-invalid]="lastName.invalid&& lastName.touched" [(ngModel)]="profileModel.lastName"  >
+      <small class=text-danger [class.d-none]="lastName.valid||lastName.untouched">please enter your last name</small>
+    </div>
+
+<p>User Name:</p>{{username}}
+
+<div class="form-group">
+    <label>gender</label>
+    <select class="custom.select" required name="gender" #gender="ngModel" [class.is-invalid]="gender.invalid&& gender.touched" [(ngModel)]="profileModel.gender">
+      <option>Man</option>
+      <option>Woman</option>
+    </select>
+    <small class=text-danger [class.d-none]="gender.valid||gender.untouched">please choose your gender</small>
+  </div>
+
+  <div class="form-group">
+      <label>Birth</label>
+      <input type="date" class="form-control" name="birth" required #birth="ngModel" [class.is-invalid]="birth.invalid&& birth.touched" [(ngModel)]="profileModel.birth">
+      <small class=text-danger [class.d-none]="birth.valid||birth.untouched">please enter your birth</small>
+    </div>
+
+    <p>Phone:</p>{{phone}}
+    <p>Email:</p>{{email}}
+
+    <button  [disabled]="userForm.form.invalid" class="btn btn-primary" type="submit" >Submit</button>
+ 
+
+</form>
