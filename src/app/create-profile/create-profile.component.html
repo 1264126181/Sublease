@@ -1,6 +1,18 @@
-
+<div class="container">
 <form #userForm="ngForm" novalidate (ngSubmit)="onSubmit()">
-{{profileModel|json}}
+<br>
+<br>
+<br>
+    <div>
+        <img [src]="imageUrl" style="width:155px;height:160px" ><br>
+        <br>
+        <div class="a">
+            <a href="javascript:;" class="file">
+        <input type="file" #Image accept="image/*"  (change)="handleFileInput($event.target.files)">Set Profile
+        </a>
+        </div>
+        </div>
+
   <div class="form-group">
     <label>First Nmame</label>
     <input type="text" class="form-control"  required name="firstName" #firstName="ngModel" [class.is-invalid]="firstName.invalid&& firstName.touched" [(ngModel)]="profileModel.firstName">
@@ -33,7 +45,8 @@
     <p>Phone:</p>{{phone}}
     <p>Email:</p>{{email}}
 
-    <button  [disabled]="userForm.form.invalid" class="btn btn-primary" type="submit" >Submit</button>
+    <button  [disabled]="userForm.form.invalid" class="btn btn-primary" (click)="onUpload()" type="submit" >Submit</button>
  
 
 </form>
+</div>

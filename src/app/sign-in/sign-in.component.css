@@ -19,8 +19,8 @@
 
 .b{
     position: absolute;
-    left: 50.4%;
-    top: 69%;
+    left: 50.7%;
+    top: 70%;
     transform: translate(-50%,-50%);
 }
 
@@ -94,4 +94,14 @@
     left: 64%;
     top: 62%;
     transform: translate(-50%,-50%);
+}
+
+
+.font{
+    color: #da1d1d;
+ 
+}
+
+.font:hover{
+    border-bottom: 1px solid red;  
 }

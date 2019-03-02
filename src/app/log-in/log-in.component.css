@@ -60,8 +60,17 @@
 
 .error2{
     position: absolute;
-    left: 63%;
+    left: 75%;
     top: 52%;
     transform: translate(-50%,-50%);
+}
+
+.font{
+    color: #da1d1d;
+ 
+}
+
+.font:hover{
+    border-bottom: 1px solid red;  
 }
 

@@ -1,35 +1,36 @@
 
 <div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light e" style="background-color: #e3f2fd;">
-    <h1 class="navbar-brand a" href="#">Sublease</h1>
+    <h1 class="navbar-brand a" href="#">Tent</h1>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item ">
-          <a routerLink="/explore" class="nav-link" href="#" routerLinkActive="active" >Expolre </a>
+          <a routerLink="/explore" class="nav-link link" href="#" routerLinkActive="active" >Explore </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/postApartment" class="nav-link" href="#" routerLinkActive="active">post Apartment </a>
+          <a routerLink="/postApartment" class="nav-link link" href="#" routerLinkActive="active">Post Apartment </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">My Post</a>
+          <a class="nav-link link" href="#">My Post</a>
         </li>
         <li class="nav-item">
-          <a routerLink="/profile" class="nav-link" href="#" routerLinkActive="active">Profile</a>
+          <div class="dropdown ">
+          <a  class="nav-link    dropdown-toggle v" href="#"  role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="material-icons large">person_pin</i></a>
+          <div class="dropdown-menu" aria- labelledby="dropdownMenuLink">
+              <a class="dropdown-item drop " href="#" routerLink="/profile"  routerLinkActive="active">My Profile</a>
+              <a class="dropdown-item drop" href="#">Log out</a>
+            </div>
+        </div>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link link" href="#" routerLink="/postApartment" >About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" >Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" >About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link b" href="#" routerLink="/login" routerLinkActive="active">Log In</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link c" href="#" routerLink="/signin" routerLinkActive="active" >Sign Up</a>
+          <a class="nav-link b link" href="#" routerLink="/login" routerLinkActive="active" routerLinkActive="active">Log In</a>
         </li>
       </ul>
     </div>

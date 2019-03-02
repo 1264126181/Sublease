@@ -14,6 +14,8 @@ import { PostApartmentComponent } from './post-apartment/post-apartment.componen
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { CreateProfileComponent } from './create-profile/create-profile.component';
+import { UploadImageComponent } from './upload-image/upload-image.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { CreateProfileComponent } from './create-profile/create-profile.componen
     ProfileComponent,
     EditProfileComponent,
     CreateProfileComponent,
+    UploadImageComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,

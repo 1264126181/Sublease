@@ -1,6 +1,5 @@
 <div class="outer">
   <div class="inner" style="background-color:whitesmoke">
-  
 
   <br>
   
@@ -115,6 +114,7 @@
 
 <div class="container">
 <h4>Price and lease</h4>
+<br>
 <div class="form-group">
     <div class="form-check form-check-inline">
     <label>begining date:</label>
@@ -150,14 +150,9 @@
         <div class="container">
         <h4>Facuility and House Information</h4>
       <div class="form-group">
-          <label>facuility</label><br>
+          <br>
           <input  type="checkbox"  value="furniture" name="furniture"  [(ngModel)]="postApartment.furniture">furniture<br>
-          <input  type="checkbox"  value="TV" name="TV" [(ngModel)]="postApartment.TV">TV<br>
-          <input  type="checkbox"  value="Wifi" name="wifi" [(ngModel)]="postApartment.wifi">Wifi<br>
-          <input  type="checkbox"  value="air conditioner" name="airConditioner" [(ngModel)]="postApartment.airConditioner" >air conditioner<br>
-          <input  type="checkbox" value="alarm" name="alarm" [(ngModel)]="postApartment.alarm">alarm<br>
           <input  type="checkbox"  value="washing  machine" name="washingMachine" [(ngModel)]="postApartment.washingMachine">washing machine<br>
-          <input  type="checkbox"  value="guard" name="guard" [(ngModel)]="postApartment.guard">guard<br>
           <input  type="checkbox"  value="gym" name="gym" [(ngModel)]="postApartment.gym">gym<br>
           <input  type="checkbox" value="swimming pool" name=swimmingPool [(ngModel)]="postApartment.swimmingPool">swimming pool<br>
           <input  type="checkbox" value="parking lot" name="parkingLot" [(ngModel)]="postApartment.parkingLot" >parking lot<br>
@@ -166,19 +161,20 @@
 
 <div class="container">
         <h4>rules</h4>
+        <br>
         <div class="form-group">
-            <label>rules</label><br>
-            <input  type="checkbox"  value="No Pet" name="no Pet"  [(ngModel)]="postApartment.noPet">No Pet<br>
-            <input  type="checkbox"  value="No Smoking" name="No Smoking" [(ngModel)]="postApartment.noSmoking">No Smoking<br>
-            <input  type="checkbox"  value="No Staying" name="No Staying" [(ngModel)]="postApartment.noStaying">No Staying<br>
-            <input  type="checkbox"  value="No Party" name="No Party" [(ngModel)]="postApartment.noParty">No Party<br>
+            
+            <input  type="checkbox"  value="No Pet" name="no Pet"  [(ngModel)]="postApartment.noPet">Allow Pets<br>
+            <input  type="checkbox"  value="No Smoking" name="No Smoking" [(ngModel)]="postApartment.noSmoking">Allow Smoking<br>
+           
+            <input  type="checkbox"  value="No Party" name="No Party" [(ngModel)]="postApartment.noParty">Allow Party<br>
           </div>
           </div>
 
           <div class="container">
             <h4>Other</h4>
         <div class="form-group">
-            <p>other information:</p><br>
+           
             <textarea rows="5" name="discripition"[(ngModel)]="postApartment.discripition" ></textarea>
           </div>
           </div>

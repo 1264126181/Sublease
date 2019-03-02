@@ -12,7 +12,7 @@
       <div class="form-group">
           <div class="form-check-inline">
               <i class="material-icons prefix">account_circle</i>
-    <input type="text" class="form-control" style="width:203px;" [(ngModel)]="userModel.username" name="username" required #username="ngModel" [class.is-invalid]="username.invalid&&username.touched">
+    <input type="text" class="form-control" style="width:203px;" placeholder="Username" [(ngModel)]="userModel.username" name="username" required #username="ngModel" [class.is-invalid]="username.invalid&&username.touched">
     </div>
     </div>
   </div>
@@ -23,7 +23,7 @@
   <div class="form-group z">
       <div class="form-check-inline">
           <i class="material-icons prefix">lock_outline</i>
-      <input type="tel" class="form-control" style="width:203px;" [(ngModel)]="userModel.password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}" required #password="ngModel"  [class.is-invalid]="password.invalid&&password.touched">
+      <input type="tel" class="form-control" style="width:203px;" placeholder="Password" [(ngModel)]="userModel.password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}" required #password="ngModel"  [class.is-invalid]="password.invalid&&password.touched">
       </div>
     </div>
     <div *ngIf="password.errors&&(password.invalid&&password.touched)" class="error2">
@@ -35,7 +35,7 @@
   <div class="form-group n">
       <div class="form-check-inline">
           <i class="material-icons prefix">mail_outline</i>
-      <input type="email" class="form-control" style="width:203px;" pattern="[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" [(ngModel)]="userModel.email" name="email" required #email="ngModel"  [class.is-invalid]="email.invalid&&email.touched">
+      <input type="email" class="form-control" style="width:203px;" placeholder="Email" pattern="[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" [(ngModel)]="userModel.email" name="email" required #email="ngModel"  [class.is-invalid]="email.invalid&&email.touched">
       </div>
     </div> 
     <div *ngIf="email.errors&&(email.invalid&&email.touched)" class="error3">
@@ -47,7 +47,7 @@
   <div class="form-group c">
       <div class="form-check-inline">
           <i class="material-icons prefix">phone</i>
-      <input type="tel" class="form-control" style="width:203px;" pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"  [(ngModel)]="userModel.phone" name="phone" required #phone="ngModel"  [class.is-invalid]="phone.invalid&&phone.touched">
+      <input type="tel" class="form-control" style="width:203px;" placeholder="Phone" pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"  [(ngModel)]="userModel.phone" name="phone" required #phone="ngModel"  [class.is-invalid]="phone.invalid&&phone.touched">
       </div>
     </div>
     <div *ngIf="phone.errors&&(phone.invalid&&phone.touched)" class="error4">
@@ -56,7 +56,8 @@
       </div>
 
     <div class="b">
-    <button type="submit" [disabled]="userform.form.invalid||topicHasError" class=" x btn btn-primary" name="action">Sign up   <i class="material-icons right p">send</i></button>
+    <button type="submit" [disabled]="userform.form.invalid||topicHasError" class=" x btn btn-primary" name="action">Sign up   <i class="material-icons right p">send</i></button><br>
+    <small>Alreadly have an account?</small><small href="#" style="cursor:pointer" class="font" routerLink="/login" routerLinkActive="active" >Log in here!</small>
   </div>
 
 </form>
@@ -88,3 +89,4 @@
 <br>
 <br>
 </div>
+

@@ -1,0 +1,26 @@
+<div class="container">
+    <br>
+    <br>
+    <br>
+    <h4>Upload Images</h4>
+    <h3></h3>
+    <br>
+    <br>
+   
+    
+    <div align="center">
+        
+<img [src]="imageUrl" style="width:290px;height:250px" ><br>
+<br>
+<div>
+<input type="file" #Image accept="image/*"class="a"  (change)="handleFileInput($event.target.files)">
+</div>
+<br>
+<div>
+<button class="btn btn-primary"  type="submit" (click)="onUpload()">Submit</button>
+</div>
+</div>
+</div>
+
+<br>
+<br>

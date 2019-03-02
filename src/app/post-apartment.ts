@@ -15,18 +15,12 @@ export class PostApartment {
         private otherCharge:number,
         private discripition:string,
         private furniture:boolean,
-        private TV:boolean,
-        private wifi:boolean,
-        private airConditioner:boolean,
-        private alarm:boolean,
-        private guard:boolean,
         private gym:boolean,
         private swimmingPool:boolean,
         private parkinglot:boolean,
         private washingMachine:boolean,
         private noPet:boolean,
         private noSmoking:boolean,
-        private noStaying:boolean,
         private noParty:boolean,
     ){}
 }

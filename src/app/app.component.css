@@ -17,3 +17,58 @@
   padding-top:0px;
   padding-bottom:0px;
 }
+
+
+ul{
+ 
+
+
+  list-style: none;
+
+  
+}
+
+li{
+  position: relative;
+ 
+  display: inline-block;
+
+
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.link{
+  position: relative;
+}
+
+.link:after{
+  content: '';
+  position: absolute;
+  width: 0; height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #fff;
+  transition: width .2s ease;
+  -webkit-transition: width .2s ease;
+}
+ 
+.link:hover:after{
+  width: 100%;
+  left: 0;
+  background: rgb(126, 106, 117);
+}
+
+.drop{
+  color:black;
+}
+
+
+
+
+
+

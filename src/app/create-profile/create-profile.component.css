@@ -1,1 +1,37 @@
- 
+ .a{
+     position: relative;
+     left:50%
+ }
+
+ .file {
+    position: relative;
+    display: inline-block;
+    background:white;
+    border: 1px solid rgb(52, 177, 94);
+    border-radius: 4px;
+    padding: 8px 16px;
+    overflow: hidden;
+    color: rgb(88, 190, 114);
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: rgb(51, 133, 35);
+    border-color: rgb(75, 201, 107);
+    color: #f6fafc;
+    text-decoration: none;
+}
+
+.a{
+    position: absolute;
+    left:25%;
+    top:26%;
+}

@@ -9,6 +9,8 @@ import { Profile } from 'selenium-webdriver/firefox';
 import { ProfileComponent } from'./profile/profile.component';
 import { EditProfileComponent } from'./edit-profile/edit-profile.component';
 import { CreateProfileComponent} from'./create-profile/create-profile.component';
+import { UploadImageComponent } from'./upload-image/upload-image.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 const routes: Routes = [
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path:'profile',  component:ProfileComponent,},
   { path:'editProfile', component:EditProfileComponent},
   { path:'createProfile',component:CreateProfileComponent},
+  { path:'imageUpload', component:UploadImageComponent},
+  { path:'aboutus', component:AboutUsComponent},
 ];
 
 @NgModule({
@@ -34,7 +38,9 @@ export const routingComponent =[ExploreComponent,
                                 PostApartmentComponent,
                                 ProfileComponent,
                                 EditProfileComponent,
-                                CreateProfileComponent,             
+                                CreateProfileComponent,   
+                                UploadImageComponent,   
+                                AboutUsComponent,       
                                                  ]
 
 

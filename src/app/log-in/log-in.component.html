@@ -10,7 +10,7 @@
         <div class="form-check-inline">
 
             <i class="material-icons prefix">account_circle</i>
-      <input  type="text" class="form-control validate" style="width:203px;" [(ngModel)]="loginModel.username" name="username" required #username="ngModel" [class.is-invalid]="username.invalid&&username.touched">
+      <input  type="text" class="form-control validate" style="width:203px;" placeholder="Username" [(ngModel)]="loginModel.username" name="username" required #username="ngModel" [class.is-invalid]="username.invalid&&username.touched">
     
         </div>
     
@@ -24,7 +24,7 @@
     <div class="form-group c">
         <div class="form-check-inline">
         <i class="material-icons prefix">lock_outline</i>
-        <input type="tel" class="form-control validate" style="width:203px;" [(ngModel)]="loginModel.password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}" required #password="ngModel"  [class.is-invalid]="password.invalid&&password.touched">
+        <input type="tel" class="form-control validate" style="width:203px;" placeholder="Password" [(ngModel)]="loginModel.password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}" required #password="ngModel"  [class.is-invalid]="password.invalid&&password.touched">
         </div>
        
       </div>
@@ -36,7 +36,8 @@
 
       <div class="b">
        
-      <button type="submit" [disabled]="userform.form.invalid||topicHasError" class=" x btn btn-primary" name="action">Log in  <i class="material-icons right p">send</i></button>
+      <button type="submit" [disabled]="userform.form.invalid||topicHasError" class=" x btn btn-primary" name="action">Log in  <i class="material-icons right p">send</i></button><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>No account?</small><small href="#" style="cursor:pointer" class="font" routerLink="/signin" routerLinkActive="active" >Create One!</small>
       </div>
 
   </form>
