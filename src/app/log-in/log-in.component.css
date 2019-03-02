@@ -1,6 +1,67 @@
-table{
-    margin:auto;
-    border:5px solid black;
-    width:40%;
-    height: 60%;
+
+
+
+.a{
+    position: absolute;
+    left: 50%;
+    top: 43.5%;
+    transform: translate(-50%,-50%);
 }
+
+
+.c{
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%,-50%);
+}
+
+.b{
+    position: absolute;
+    left: 50.4%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+}
+
+.p{
+    position: absolute;
+    top:18%;
+    left:62%;
+}
+
+.x{
+    background-color: rgb(243, 40, 57);
+    padding-left: 79px;
+    padding-right:79px; 
+}
+
+.i{
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%,-50%);
+    font-size: 100px;
+}
+
+.background{
+    
+    background: url(/assets/bg_login_default.jpg) ;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+
+    
+}
+.error1{
+    position: absolute;
+    left: 61.5%;
+    top: 43.5%;
+    transform: translate(-50%,-50%);
+}
+
+.error2{
+    position: absolute;
+    left: 63%;
+    top: 52%;
+    transform: translate(-50%,-50%);
+}
+

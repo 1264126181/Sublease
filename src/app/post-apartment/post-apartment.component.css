@@ -4,3 +4,14 @@ input.a{display:inline}
 h4{
     border-bottom:thin solid #dfdbdb;
 }
+
+.inner{
+    max-width:1300px;
+    margin: auto;
+}
+
+.outer{
+    background-image: url(/assets/1-1Q104142K60-L.jpg);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}

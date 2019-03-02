@@ -1,28 +1,71 @@
+<div class="background">>
 <br>
 <br>
 <br>
 <form #userform="ngForm" novalidate (ngSubmit)="onSubmit()">
-
-    <table border="1em">
-      <h2>Log In</h2>
+    <i class="material-icons right i">cloud_circle</i>
       <br>
-    <div class="form-group">
-      <label>Username</label>
-      <input type="text" class="form-control" [(ngModel)]="loginModel.username" name="username" required #username="ngModel" [class.is-invalid]="username.invalid&&username.touched">
-    <small class="text-danger" [class.d-none]="username.valid||username.untouched"> name is required</small>
-    </div>
+    <div class="form-group a">
+
+        <div class="form-check-inline">
+
+            <i class="material-icons prefix">account_circle</i>
+      <input  type="text" class="form-control validate" style="width:203px;" [(ngModel)]="loginModel.username" name="username" required #username="ngModel" [class.is-invalid]="username.invalid&&username.touched">
+    
+        </div>
+    
+  </div>
+  <div class="error1">
+      <small class="text-danger" [class.d-none]="username.valid||username.untouched"> name is required</small>
+     
+   </div>
+    
   
-    <div class="form-group">
-        <label>Password</label>
-        <input type="tel" class="form-control" [(ngModel)]="loginModel.password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}" required #password="ngModel"  [class.is-invalid]="password.invalid&&password.touched">
-      <div *ngIf="password.errors&&(password.invalid&&password.touched)">
-      <small *ngIf="password.errors.required" class="text-danger">please entyer a password</small>
-      <small *ngIf="password.errors.pattern" class="text-danger">password should contain At least six characters, one uppercase letter, one lowercase letter, one number and one special character</small>
-    </div>
+    <div class="form-group c">
+        <div class="form-check-inline">
+        <i class="material-icons prefix">lock_outline</i>
+        <input type="tel" class="form-control validate" style="width:203px;" [(ngModel)]="loginModel.password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}" required #password="ngModel"  [class.is-invalid]="password.invalid&&password.touched">
+        </div>
+       
       </div>
 
-      <button type="submit" [disabled]="userform.form.invalid||topicHasError">submit</button>
-    </table>
+      <div *ngIf="password.errors&&(password.invalid&&password.touched)" class="error2">
+          <small *ngIf="password.errors.required" class="text-danger">please entyer a password</small>
+          <small *ngIf="password.errors.pattern" class="text-danger">password should contain At least six characters, one uppercase letter, one lowercase letter, one number and one special character</small>
+        </div>
+
+      <div class="b">
+       
+      <button type="submit" [disabled]="userform.form.invalid||topicHasError" class=" x btn btn-primary" name="action">Log in  <i class="material-icons right p">send</i></button>
+      </div>
+
   </form>
-  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<br>
+  </div>
+
 

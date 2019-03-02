@@ -1,47 +1,90 @@
-<br>
-<br>
-<br>
+<div class="background">
+    <br>
+    <br>
+    <br>
 <form #userform="ngForm" novalidate (ngSubmit)="onSubmit()">
 
-  <table border="1em">
-    <h2>Sign Up</h2>
-    <br>
-  <div class="form-group">
-    <label>Username</label>
-    <input type="text" class="form-control" [(ngModel)]="userModel.username" name="username" required #username="ngModel" [class.is-invalid]="username.invalid&&username.touched">
-  <small class="text-danger" [class.d-none]="username.valid||username.untouched"> name is required</small>
-  </div>
-
-  <div class="form-group">
-      <label>Password</label>
-      <input type="tel" class="form-control" [(ngModel)]="userModel.password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}" required #password="ngModel"  [class.is-invalid]="password.invalid&&password.touched">
-    <div *ngIf="password.errors&&(password.invalid&&password.touched)">
-    <small *ngIf="password.errors.required" class="text-danger">please enter a password</small>
-    <small *ngIf="password.errors.pattern" class="text-danger">password should contain At least six characters, one uppercase letter, one lowercase letter, one number and one special character</small>
-  </div>
-    </div>
-
-   
-  <div class="form-group">
-      <label>Email</label>
-      <input type="email" class="form-control" pattern="[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" [(ngModel)]="userModel.email" name="email" required #email="ngModel"  [class.is-invalid]="email.invalid&&email.touched">
-    <div *ngIf="email.errors&&(email.invalid&&email.touched)">
-      <small *ngIf="email.errors.required" class="text-danger">please enter an email</small>
-      <small *ngIf="email.errors.pattern" class="text-danger">the format of Email is wrong</small>
-    </div>
-    </div> 
 
     
-  <div class="form-group">
-      <label>phone</label>
-      <input type="tel" class="form-control" pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"  [(ngModel)]="userModel.phone" name="phone" required #phone="ngModel"  [class.is-invalid]="phone.invalid&&phone.touched">
-      <div *ngIf="phone.errors&&(phone.invalid&&phone.touched)">
+    <i class="material-icons right i">cloud_circle</i>
+
+  <div class="form-group y">
+      <div class="form-group">
+          <div class="form-check-inline">
+              <i class="material-icons prefix">account_circle</i>
+    <input type="text" class="form-control" style="width:203px;" [(ngModel)]="userModel.username" name="username" required #username="ngModel" [class.is-invalid]="username.invalid&&username.touched">
+    </div>
+    </div>
+  </div>
+  <div class="error1">
+      <small class="text-danger" [class.d-none]="username.valid||username.untouched"> name is required</small>
+      </div>
+
+  <div class="form-group z">
+      <div class="form-check-inline">
+          <i class="material-icons prefix">lock_outline</i>
+      <input type="tel" class="form-control" style="width:203px;" [(ngModel)]="userModel.password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}" required #password="ngModel"  [class.is-invalid]="password.invalid&&password.touched">
+      </div>
+    </div>
+    <div *ngIf="password.errors&&(password.invalid&&password.touched)" class="error2">
+        <small *ngIf="password.errors.required" class="text-danger">please enter a password</small>
+        <small *ngIf="password.errors.pattern" class="text-danger">password should contain At least six characters, one uppercase letter, one lowercase letter, one number and one special character</small>
+      </div>
+
+   
+  <div class="form-group n">
+      <div class="form-check-inline">
+          <i class="material-icons prefix">mail_outline</i>
+      <input type="email" class="form-control" style="width:203px;" pattern="[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" [(ngModel)]="userModel.email" name="email" required #email="ngModel"  [class.is-invalid]="email.invalid&&email.touched">
+      </div>
+    </div> 
+    <div *ngIf="email.errors&&(email.invalid&&email.touched)" class="error3">
+        <small *ngIf="email.errors.required" class="text-danger">please enter an email</small>
+        <small *ngIf="email.errors.pattern" class="text-danger">the format of Email is wrong</small>
+      </div>
+
+    
+  <div class="form-group c">
+      <div class="form-check-inline">
+          <i class="material-icons prefix">phone</i>
+      <input type="tel" class="form-control" style="width:203px;" pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"  [(ngModel)]="userModel.phone" name="phone" required #phone="ngModel"  [class.is-invalid]="phone.invalid&&phone.touched">
+      </div>
+    </div>
+    <div *ngIf="phone.errors&&(phone.invalid&&phone.touched)" class="error4">
         <small *ngIf="phone.errors.required" class="text-danger">please enter a phone number</small>
         <small *ngIf="phone.errors.pattern" class="text-danger">the format of phone is wrong</small>
       </div>
-    </div>
 
-    <button type="submit" [disabled]="userform.form.invalid||topicHasError">submit</button>
-  </table>
+    <div class="b">
+    <button type="submit" [disabled]="userform.form.invalid||topicHasError" class=" x btn btn-primary" name="action">Sign up   <i class="material-icons right p">send</i></button>
+  </div>
+
 </form>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>

@@ -19,7 +19,7 @@ countrys=['united states','China','Canada','Spain','Europe']
 types=['apartment','Single Family House',' Townhouse','other']
 postApartment= new PostApartment("","","","",null,"",null,null,"","","",null,null,"",null,null,null,null,null,null,null,null,null,null,null,null,null,null);
 
-imageUrl:string="assets/images.png";
+imageUrl:string="assets/40574338e3455ef.jpg";
 fileUpload: File = null;
 _url='';
 
@@ -60,6 +60,12 @@ onSubmit(){
                           error=>console.error('Error!',error)
                          )
 }
+
+
+
+
+
+
 
 
 }

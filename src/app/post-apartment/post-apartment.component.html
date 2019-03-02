@@ -1,24 +1,32 @@
-<br>
-<br>
-<br>
-
-
-    <h2>Apartment</h2>
+<div class="outer">
+  <div class="inner" style="background-color:whitesmoke">
   
-    <br>
-    <form #imageForm ="ngForm">
-    <span>please upload the picture</span>
-    <img [src]="imageUrl" style="width:250px;height:200px" >
-<input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
-<button type="submit" (click)="onUpload()">Submit</button>
-</form>
+
+  <br>
+  
+      <h2 align="center">Post your Apartment</h2>
+      <br>
+      <br>
+    
+      <div class="container">
+      
+      <form #imageForm ="ngForm" align="center">
+      <img [src]="imageUrl" style="width:290px;height:250px" ><br>
+      <br>
+  <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+  <button class="butt" type="submit" (click)="onUpload()">Submit</button>
+  </form>
+      </div>
+      <br>
+      <br>
+  
    
     <div>
       <form #userForm="ngForm" novalidate (ngSubmit)="onSubmit()">
 
 
    
-
+          <div class="container">
 <h4>Basic Information</h4><br>
     <div class="form-group "> 
         <div class="form-check form-check-inline">
@@ -32,30 +40,45 @@
 
     <div class="form-group">
         <div class="form-check form-check-inline">
-<label>address:</label>             
+<label >address:</label>             
 <input type="text" name="address" style="width:600px;" [(ngModel)]="postApartment.address" class="form-control" required #address="ngModel" [class.is-invalid]="address.invalid&& address.touched">
 </div><br>
 <small class="text-danger" [class.d-none]="address.valid||address.untouched">please enter the address</small>
 <br>
 
-<div class="form-check form-check-inline">
-    &nbsp;&nbsp;&nbsp;&nbsp;<label>City:</label>
-<input type="text" name="city" style="width:200px;" [(ngModel)]="postApartment.city" class="form-control" required #city="ngModel" [class.is-invalid]="city.invalid&& city.touched">
-</div>
+<div class="form-row">
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+   <label >City:</label>
+   <div>
+<input type="text" name="city" style="width:200px;" [(ngModel)]="postApartment.city" class="form-control m" required #city="ngModel" [class.is-invalid]="city.invalid&& city.touched">
+
+
+<div>
 <small class="text-danger" [class.d-none]="city.valid||city.untouched">please enter the city</small>&nbsp;
-
-<div class="form-check form-check-inline">
-    &nbsp;<label>state:</label>
-<input type="text" name="state" style="width:200px;" [(ngModel)]="postApartment.state" class="form-control" required #state="ngModel" [class.is-invalid]="state.invalid&& state.touched">
 </div>
+</div>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; 
+   <label>state:</label>
+   <div>
+<input type="text" name="state" style="width:200px;" [(ngModel)]="postApartment.state" class="form-control d" required #state="ngModel" [class.is-invalid]="state.invalid&& state.touched">
+<div>
 <small class="text-danger" [class.d-none]="state.valid||state.untouched">please enter the state</small>&nbsp;
-
-<div class="form-check form-check-inline">
-    &nbsp;<label>Postcode:</label>
-<input type="text" name="Postcode" style="width:200px;" [(ngModel)]="postApartment.postcode" class="form-control" required #postcode="ngModel" [class.is-invalid]="postcode.invalid&& postcode.touched" pattern= "\d{5}([ \-]\d{4})?">
 </div>
+</div>
+
+&nbsp; &nbsp; &nbsp; &nbsp; 
+  <label>Postcode:</label>
+  <div>
+<input type="text" name="Postcode" style="width:200px;" [(ngModel)]="postApartment.postcode" class="form-control e" required #postcode="ngModel" [class.is-invalid]="postcode.invalid&& postcode.touched" pattern= "\d{5}([ \-]\d{4})?">
+<div>
 <small class="text-danger" [class.d-none]="postcode.valid||postcode.untouched">please enter the postcode</small>&nbsp;
     </div>
+    </div>
+    </div>
+    </div>
+
 
     <div class="form-group">
         <div class="form-check form-check-inline">
@@ -63,41 +86,53 @@
         <select class="form-control custom.select" style="width:250px;" name="type" [(ngModel)]="postApartment.type" required #type="ngModel" [class.is-invalid]="type.invalid&&type.touched">
             <option *ngFor="let type of types">{{type}}</option>
         </select>
-        </div>
+        </div><br>
         <small class="text-danger" [class.d-none]="type.valid||type.untouched">please enter a type of apartment</small>
     </div>
 
 <div class="form-group">
-  <label>Bedroom Number</label>
-  <input type="number" name="bedroom" [(ngModel)]="postApartment.bedroom" class="form-control" required #bedroom="ngModel" [class.is-invalid]="bedroom.invalid&&bedroom.touched">
+    <div class="form-check form-check-inline">
+  <label>Bedroom Number:</label>
+  <input type="number" style="width:250px;" name="bedroom" [(ngModel)]="postApartment.bedroom" class="form-control" required #bedroom="ngModel" [class.is-invalid]="bedroom.invalid&&bedroom.touched">
+  </div><br>
   <small class="text-danger" [class.d-none]="bedroom.valid||bedroom.untouched">please enter the number of bedroom</small><br>
 
-  <label>Bathroom Number</label>
-  <input type="number" name="bathroom" [(ngModel)]="postApartment.bathroom" class="form-control" required #bathroom="ngModel" [class.is-invalid]="bathroom.invalid&&bathroom.touched">
+  <div class="form-check form-check-inline">
+  <label>Bathroom Number:</label>
+  <input type="number" style="width:250px;" name="bathroom" [(ngModel)]="postApartment.bathroom" class="form-control" required #bathroom="ngModel" [class.is-invalid]="bathroom.invalid&&bathroom.touched">
+  </div><br>
   <small class="text-danger" [class.d-none]="bathroom.valid||bathroom.untouched">please enter the number of bathroom</small><br>
 </div>
 
 <div class="form-group">
-  <label>Contact information</label>
-  <input type="text" name="contact" [(ngModel)]="postApartment.contact" class="form-control" required #contact="ngModel" [class.is-invalid]="contact.invalid&&contact.touched">
-  <small class="text-danger" [class.d-none]="bathroom.valid||bathroom.untouched">please enter the main contact information</small><br>
+    <div class="form-check form-check-inline">
+  <label>Contact information:</label>
+  <input type="text" style="width:250px;" name="contact" [(ngModel)]="postApartment.contact" class="form-control" required #contact="ngModel" [class.is-invalid]="contact.invalid&&contact.touched">
+  </div><br>
+  <small class="text-danger" [class.d-none]="contact.valid||contact.untouched">please enter the main contact information</small><br>
+</div>
 </div>
 
+<div class="container">
 <h4>Price and lease</h4>
 <div class="form-group">
-    <label>begining time</label>
-    <input type="date" name="begining" [(ngModel)]="postApartment.begining" class="form-control" required #begining="ngModel" [class.is-invalid]="begining.invalid&&begining.touched">
+    <div class="form-check form-check-inline">
+    <label>begining date:</label>
+    <input type="date" style="width:250px;" name="begining" [(ngModel)]="postApartment.begining" class="form-control" required #begining="ngModel" [class.is-invalid]="begining.invalid&&begining.touched">
+    </div><br>
     <small class="text-danger" [class.d-none]="begining.valid||begining.untouched">please enter the begining date</small><br>
   </div>
 
   <div class="form-group">
-      <label>ending date</label>
-      <input type="date" name="ending" [(ngModel)]="postApartment.ending" class="form-control" required #ending="ngModel" [class.is-invalid]="ending.invalid&&ending.touched">
+      <div class="form-check form-check-inline">
+      <label>ending date:</label>
+      <input type="date" style="width:250px;" name="ending" [(ngModel)]="postApartment.ending" class="form-control" required #ending="ngModel" [class.is-invalid]="ending.invalid&&ending.touched">
+      </div><br>
       <small class="text-danger" [class.d-none]="ending.valid||ending.untouched">please enter the ending date</small><br>
     </div>
 
     <div class="form-group">
-        <label>rent price</label>
+        <label>rent price:</label>
         <div class="form-check form-check-inline">
         <input type="number" name="rent" [(ngModel)]="postApartment.rent" class="form-control" required #rent="ngModel" [class.is-invalid]="rent.invalid&&rent.touched"> <span>USD/month</span></div>
         <small class="text-danger" [class.d-none]="rent.valid||rent.untouched">please enter the rent price</small><br>
@@ -105,13 +140,14 @@
       </div>
 
       <div class="form-group">
-          <label>other charge</label>
+          <label>other charge:</label>
           <div class="form-check form-check-inline">
           <input type="number" name="otherCharge" [(ngModel)]="postApartment.otherCharge" class="form-control" required #otherCharge="ngModel" [class.is-invalid]="otherCharge.invalid&&otherCharge.touched"><span>USD/month</span></div>
           <small class="text-danger" [class.d-none]="otherCharge.valid||otherCharge.untouched">please enter the other charges</small><br>
-          
+        </div>
         </div>
 
+        <div class="container">
         <h4>Facuility and House Information</h4>
       <div class="form-group">
           <label>facuility</label><br>
@@ -126,7 +162,9 @@
           <input  type="checkbox" value="swimming pool" name=swimmingPool [(ngModel)]="postApartment.swimmingPool">swimming pool<br>
           <input  type="checkbox" value="parking lot" name="parkingLot" [(ngModel)]="postApartment.parkingLot" >parking lot<br>
         </div>
+        </div>
 
+<div class="container">
         <h4>rules</h4>
         <div class="form-group">
             <label>rules</label><br>
@@ -135,11 +173,27 @@
             <input  type="checkbox"  value="No Staying" name="No Staying" [(ngModel)]="postApartment.noStaying">No Staying<br>
             <input  type="checkbox"  value="No Party" name="No Party" [(ngModel)]="postApartment.noParty">No Party<br>
           </div>
+          </div>
 
+          <div class="container">
+            <h4>Other</h4>
         <div class="form-group">
-            <label>discripition of the Apartment</label>
+            <p>other information:</p><br>
             <textarea rows="5" name="discripition"[(ngModel)]="postApartment.discripition" ></textarea>
           </div>
-          <button [disabled]="userForm.form.invalid||topicHasError" class="btn btn-primary" type="submit" >Submit Form</button>
+          </div>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+           <button [disabled]="userForm.form.invalid||topicHasError" class="btn btn-primary" type="submit" >Submit Form</button>
 </form>
 </div>
+</div>
+
+
+
+
+
+
+
+
+
+
